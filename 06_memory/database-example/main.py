@@ -68,7 +68,7 @@ async def chat(request: ChatReuqest):
         raise HTTPException(status_code=500, detail=str(e))
     
 # 채팅 히스토리 조회
-@app.get("/chat_history/{user_id}/{conversation_id}")
+@app.get("/chat_history/{user_id}/{conversation_id}") 
 async def get_history(user_id: str, conversation_id:str):
     try:
         history=SQLChatMessageHistory(
